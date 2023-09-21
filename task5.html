@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let fizzStat = 0;
+    let buzzStat = 0;
+    let fizzBuzzStat = 0;
+    let falseStat = 0;
+
+    while (true) {
+        const command = prompt("Введите число.");
+
+        if (command === "exit") {
+            break;
+        }
+
+        let number = parseInt(command);
+        switch (true) {
+
+            case number % 5 === 0 && number % 3 === 0:
+                console.log('FizzBuzz');
+                fizzBuzzStat++;
+                break;
+
+            case number % 3 === 0:
+                console.log('Fizz');
+                fizzStat++;
+                break;
+
+            case number % 5 === 0:
+                console.log('Buzz');
+                buzzStat++;
+                break;
+
+
+            default:
+                console.log(number);
+                falseStat++;
+                break;
+        }
+    }
+
+    console.log('Статистика:')
+    console.log("Fizz: " + fizzStat);
+    console.log("Buzz: " + buzzStat);
+    console.log("FizzBuzz: " + fizzBuzzStat);
+    console.log("Числа: " + falseStat);
+</script>
+</body>
+</html>
